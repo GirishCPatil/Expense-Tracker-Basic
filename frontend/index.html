@@ -5,7 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker Basic</title>
 </head>
+ <style>
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: center;
+    }
+    button {
+      margin: 2px;
+    }
+  </style>
 <body>
+
+    <form id="expenseForm" action="post">
     <label for="expAmt">Choose Expense Amount</label>
     <input id="expAmt" type="number">
     <label for="desc">Description</label>
@@ -18,8 +35,20 @@
         <option value="Other">Other</option>
         </select>
     <button id="addExpBtn">Add Expense</button>
-    <ul id="expenseList"></ul>
     
+    </form>
+    <h2>Past Expenses</h2>
+    <table id="expTable">
+            <tr>
+                <th>Amount</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Actions</th>
+             
+            </tr>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
     <script src="./index.js"></script>
 </body>
 </html>
